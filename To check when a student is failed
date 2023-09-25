@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+ int A,B;
+ printf("enter the percentage of main subject ");
+ scanf("%d",&A);
+ printf("entre the percentage of subsidiary subject");
+ scanf("%d",&B);
+ if(A>=45&&B>=45)
+ {
+ printf("the student is qualified");
+ }
+ else if((A>=45||A>=55)&&B>=55)
+ {
+ printf("the student is qualified");
+ }
+ else if(A>=65&&B<=45)
+ {
+ printf("the student is allowed to reappear in B");
+ }
+ else
+ {
+  printf("the student is failed");
+ }
+ return 0 ;
+}
