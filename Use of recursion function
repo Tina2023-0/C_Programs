@@ -1,0 +1,21 @@
+#include<stdio.h>
+void print_bin_recur( unsigned int n)
+{
+if(n==0||n==1)
+printf("%d",n);
+else
+{
+print_bin_recur(n/2);
+printf("%d",n%2);
+}
+}
+int main()
+{
+unsigned int n;
+printf("input a positive number");
+scanf("%u",&n);
+printf("\n in binary system is ",n);
+print_bin_recur(n);
+return 1 ;
+
+}
