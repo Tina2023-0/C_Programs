@@ -1,0 +1,65 @@
+#include<stdio.h>
+
+struct mat {
+
+    int arr[10][10];
+
+    int r,c;
+
+};
+
+typedef struct mat Matrix;
+
+void read_matrix(Matrix *x) {
+
+    int i,j;
+
+    printf("Input dimension of the matrxi");
+
+    scanf("%d%d",&x->r,&x->c);
+
+        printf("Input elements of the matrix");
+
+        for(i=0; i<x->r; i++)
+
+        for(j=0; j<x->c; j++)
+
+            scanf("%d",&x->arr[i][j]);
+
+    }
+
+void print_matrix(Matrix *x) {
+
+    int i,j;
+
+    for(i=0; i<x->r; i++)
+
+    {
+
+        for(j=0; j<x->c; j++)
+
+            printf(" %d ",x->arr[i][j]);
+
+        printf("\n");
+
+    }
+
+}
+
+
+int main() 
+{
+
+    Matrix a,b,c;
+
+    read_matrix(&a);
+
+    printf(
+
+        "\n the matrix is \n");
+
+    print_matrix(&a);
+
+    return 1;
+
+}
