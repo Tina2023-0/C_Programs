@@ -1,0 +1,33 @@
+//constructor overloading
+using namespace std;
+#include<iostream>
+class test{
+    int a,b,c;
+    public:
+    test()
+    {
+        a=b=c=0;
+        cout<<"numbers are\n "<<a;
+        cout<<"\nand"<<b;
+        cout<<"and \n"<<c;
+    }
+    test(int x,int y)
+    {
+        a=x;
+        b=y;
+        cout<<"\n the entered numbers are :"<<a<<"and \n"<<b;
+
+    }
+    test(int z)
+    {
+        c=z;
+        cout<<"\none parameter constructor :"<<c;
+    }
+};
+int main()
+{
+    test t(3,4);
+    test t1(6);
+    test t2();
+    return 0;
+}
