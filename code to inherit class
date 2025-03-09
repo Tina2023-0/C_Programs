@@ -1,0 +1,61 @@
+using namespace std;
+#include<iostream>
+class employee{
+    protected:
+    int emp_id;
+    char name[20],desig[20];
+    public:
+    void get_employee_data()
+    {
+        cout<<"\n enter the employee id";
+        cin>>emp_id;
+        cout<<"\n enter name of the employee";
+        cin>>name;
+        cout<<"\nenter the dedignation of the employee";
+        cin>>desig;
+    }
+};
+class salary:public employee
+{
+float bp,da,hra,gross;
+public:
+void get_salary_data()
+{
+    cout<<"\n enter the basic pay";
+    cin>>bp;
+    cout<<"\n enter the da value";
+    cin>>da;
+    cout<<"\n enter the hra value";
+    cin>>hra;
+    gross=bp+(da/bp*100)+(hra/da*100);
+}
+void display()
+{
+    cout<<"\n employee id is "<<emp_id;
+    cout<<"\n employee name is "<<name;
+    cout<<"\n employee designation is "<<desig;
+    cout<<"\n employee basic pay is "<<bp;
+    cout<<"\n employee da value is"<<da;
+    cout<<"\n employee hra value is"<<hra;
+    cout<<"\n total salary of an employee"<<gross ;
+
+}
+};
+int main()
+{
+    salary s[10];
+    int i,n;
+    cout<<"\n enter no. of employee";
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        cout<<"\n enter record of employee"<<i+1;
+        s[i].get_employee_data();
+        s[i].get_salary_data();
+    }
+    for(i=0;i<n;i++)
+    {
+        cout<<"\n salary record of employee "<<i+1;
+        s[i].display();
+    }
+}
