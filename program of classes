@@ -1,0 +1,38 @@
+using namespace std;
+#include<iostream>
+class veg{
+    public:
+    string color;
+    float amount;
+};
+class fruit:public veg{
+    public:
+    string season;
+    float weight;
+};
+class food:public veg{
+    public:
+    string name;
+};
+int main()
+{
+    food s;
+    fruit t;
+    s.name;
+    t.season="winter";
+    t.weight=30;
+    t.color="orange";
+    t.amount=40;
+    s.name="apple";
+    s.color="red";
+    s.amount=22.5;
+    cout<<"  "<<s.name;
+    cout<<"\n Color of the fruit"<<" "<<s.color;
+    cout<<"\n amount is :"<<s.amount;
+    cout<<"\n name is "<<s.name;
+
+    cout<<"\n season of the fruit :"<<t.season;
+    cout<<"\n weight per kg of  the fruit is"<<" "<<t.weight;
+    cout<<"\n amount is :"<<t.amount;
+    return 0;
+}
