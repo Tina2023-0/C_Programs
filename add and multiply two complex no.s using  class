@@ -1,0 +1,45 @@
+using namespace std;
+#include<iostream>
+class complex{
+    private:
+    double real,img ;
+    public:
+    complex()
+    {
+        real=img=0;
+    }
+    complex(double x)
+    {
+        real=img=x;
+    }
+    complex(double x,double y)
+    {
+        real=x;
+        img =y;
+    }
+    double rpart()
+    {
+        cout<<"\nreal part of complex no. "<<real;
+    }
+    double ipart()
+    {
+        cout<<"\nimg part of complex no."<<img;
+    }
+    double add(complex x,complex y)
+    {
+        cout<<"\naddition of two complex no."<<(real+x.real)<<"+i"<<(img+y.img);
+    }
+    double mul(complex x,complex y)
+    {
+        cout<<"\n multiplication result :"<<((real*x.real)-(img*y.img))<<"+i"<<((real*y.img)+(img*x.real));
+    }
+};
+int main()
+{
+    complex s(3.3,4.4);
+    s.rpart();
+    s.ipart();
+    s.add(2.2,3.3);
+    s.mul(1.1,2.2);
+    return 0;
+}
