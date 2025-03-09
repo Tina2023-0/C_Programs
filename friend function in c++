@@ -1,0 +1,23 @@
+using namespace std;
+#include<iostream>
+class test{
+    int a,b;
+    public:
+    test(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    friend void print(test);
+};
+void print(test t)
+{
+    cout<<"A= "<<t.a;
+    cout<<"\nB= "<<t.b;
+}
+int main()
+{
+    test t(5,8);
+    print(t);
+    return 0;
+}
