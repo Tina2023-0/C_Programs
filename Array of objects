@@ -1,0 +1,36 @@
+
+using namespace std;
+#include<iostream>
+class student{
+    int roll_no;
+    char name[10];
+    public:
+    void read()
+    {
+        cout<<"\n Enter roll no.";
+        cin>>roll_no;
+        cout<<"\n Enter name of the student ";
+        cin>>name;
+    }
+    void display()
+    {
+        cout<<"\n Roll no. of the student "<<roll_no;
+        cout<<"\n name of the student is "<<name;
+    }
+};
+int main()
+{
+    student t[10];
+    int i,n;
+    cout<<"\n enter no. of student ";
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        t[i].read();
+    }
+    for(int i=0;i<n;i++)
+    {
+        t[i].display();
+    }
+    return 0;
+}
